@@ -18,10 +18,4 @@ public class Aritmetica {
         return ultimoResultado;
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 3 ; i++) {
-            System.out.println("Esto saldra 3 veces");
-        }
-	//Pablo ha llegado todo
-    }
 }
