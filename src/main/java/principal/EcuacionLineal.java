@@ -25,15 +25,16 @@ public class EcuacionLineal {
     }
 
     public boolean haySolucion() throws ArithmeticException{
-        if (this.a==0){
-            if (this.b == 0)
-                throw new ArithmeticException("Tiene infinitas soluciones");
-            return false;
-        }
+        if (this.a==0)
+            return this.b == 0;
+
         return true;
     }
 
     public double solucion(){
-            return (this.b*(-1)/this.a);
+        if (this.a == 0 && this.b == 0) {
+            return Double.POSITIVE_INFINITY;
+        }
+        return (this.b*(-1.0)/this.a);
     }
 }

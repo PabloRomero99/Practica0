@@ -12,7 +12,7 @@ class EcuacionLinealTest {
 
 
     @Test
-    void testhaySolucion() {
+    void haySolucion() {
         ecuacionPrueba1 = new EcuacionLineal(0,1);
         ecuacionPrueba2 = new EcuacionLineal(10,5);
         //ecuacionPrueba3 = new EcuacionLineal(0,0);
@@ -43,7 +43,7 @@ class EcuacionLinealTest {
 
         assertEquals(2,ecuacionPrueba1.solucion());
         assertEquals(-1,ecuacionPrueba2.solucion());
-        assertEquals(0,ecuacionPrueba3.solucion());
+        //assertEquals(0,ecuacionPrueba3.solucion());
         assertEquals(Double.POSITIVE_INFINITY,ecuacionPrueba3.solucion());
 
     }
