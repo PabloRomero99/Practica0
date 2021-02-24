@@ -40,13 +40,8 @@ public class EcuacionCuadratica {
 
     public double[] solucion(){
         double sol[] = new double[2];
-        if (this.a == 0) {
-            sol[0] = sol[1] = Double.POSITIVE_INFINITY;
-            return sol;
-        }else {
-            sol[0] = (-this.b + Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c)) / 2 * this.a;
-            sol[0] = (-this.b - Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c)) / 2 * this.a;
-            return sol;
-        }
+        sol[0] = (-this.b + (Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c))) / 2 * this.a;
+        sol[1] = (-this.b - (Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c))) / 2 * this.a;
+        return sol;
     }
 }

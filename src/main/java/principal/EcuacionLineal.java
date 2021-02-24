@@ -34,6 +34,6 @@ public class EcuacionLineal {
         if (this.a == 0 && this.b == 0) {
             return Double.POSITIVE_INFINITY;
         }
-        return (this.b*(-1.0)/this.a);
+        return (-this.b/this.a);
     }
 }
