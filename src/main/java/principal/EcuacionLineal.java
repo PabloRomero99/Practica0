@@ -33,7 +33,7 @@ public class EcuacionLineal {
         return true;
     }
 
-    public int solucion(){
+    public double solucion(){
             return (this.b*(-1)/this.a);
     }
 }

@@ -39,11 +39,12 @@ class EcuacionLinealTest {
 
         ecuacionPrueba1 = new EcuacionLineal(5,-10);
         ecuacionPrueba2 = new EcuacionLineal(10,10);
-        ecuacionPrueba3 = new EcuacionLineal(20,0);
+        ecuacionPrueba3 = new EcuacionLineal(0,0);
 
         assertEquals(2,ecuacionPrueba1.solucion());
         assertEquals(-1,ecuacionPrueba2.solucion());
         assertEquals(0,ecuacionPrueba3.solucion());
+        assertEquals(Double.POSITIVE_INFINITY,ecuacionPrueba3.solucion());
 
     }
 }
