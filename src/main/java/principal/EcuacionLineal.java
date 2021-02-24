@@ -32,8 +32,6 @@ public class EcuacionLineal {
     }
 
     public int solucion(int a, int b){
-        a = a*b;
-        //vamo vamo vamo
         return a;
     }
 }
