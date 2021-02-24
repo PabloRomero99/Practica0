@@ -24,10 +24,9 @@ public class EcuacionLineal {
         this.b = b;
     }
 
-    public boolean haySolucion() throws ArithmeticException{
+    public boolean haySolucion(){
         if (this.a==0)
             return this.b == 0;
-
         return true;
     }
 
@@ -35,6 +34,7 @@ public class EcuacionLineal {
         if (this.a == 0 && this.b == 0) {
             return Double.POSITIVE_INFINITY;
         }
+
         return (this.b*(-1.0)/this.a);
     }
 }
