@@ -24,7 +24,7 @@ public class EcuacionLineal {
         this.b = b;
     }
 
-    public boolean haySolucion(int a){
+    public boolean haySolucion(int a, int b){
         if (a==0){
             return false;
         }
@@ -32,8 +32,8 @@ public class EcuacionLineal {
     }
 
     public int solucion(int a, int b){
-        a = a*b;
-        //vamo vamo vamo
-        return a;
+        if (haySolucion(a,b))
+            return (b*(-1)/a);
+        return -1;
     }
 }
