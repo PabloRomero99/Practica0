@@ -39,9 +39,12 @@ public class EcuacionCuadratica {
     }
 
     public double[] solucion(){
-        double sol[] = new double[2];
-        sol[0] = (-this.b + (Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c))) / 2 * this.a;
-        sol[1] = (-this.b - (Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c))) / 2 * this.a;
+        double[] sol = new double[2];
+
+        sol[0] = (-this.b + Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c)) / (2 * this.a);
+        sol[1] = (-this.b - Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c)) / (2 * this.a);
+
         return sol;
+
     }
 }
