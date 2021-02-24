@@ -32,8 +32,6 @@ public class EcuacionLineal {
     }
 
     public int solucion(int a, int b){
-        if (haySolucion(a,b))
             return (b*(-1)/a);
-        return -1;
     }
 }
