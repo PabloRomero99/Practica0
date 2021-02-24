@@ -2,7 +2,7 @@ package principal;
 
 
 public class EcuacionCuadratica {
-    private double a, b,c;
+    private double a, b, c;
 
     public EcuacionCuadratica(double a, double b, double c) {
         this.a = a;
@@ -31,14 +31,22 @@ public class EcuacionCuadratica {
 
     public boolean haySolucion(){
         if (this.a==0)
-            return this.b == 0;
+            return false;
+        if ((this.a * this.c * 4) > Math.pow(b,2)){
+            return false; //throw new ArithmeticException("No tiene solución ");
+        }
         return true;
     }
 
-    public double solucion(){
-        if (this.a == 0 && this.b == 0) {
-            return Double.POSITIVE_INFINITY;
+    public double[] solucion(){
+        double sol[] = new double[2];
+        if (this.a == 0) {
+            sol[0] = sol[1] = Double.POSITIVE_INFINITY;
+            return sol;
+        }else {
+            sol[0] = (-this.b + Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c)) / 2 * this.a;
+            sol[0] = (-this.b - Math.sqrt(Math.pow(this.b, 2) - 4 * this.a * this.c)) / 2 * this.a;
+            return sol;
         }
-        return (this.b*(-1.0)/this.a);
     }
 }

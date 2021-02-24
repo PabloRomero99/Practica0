@@ -3,7 +3,7 @@ package principal;
 public class EcuacionLineal {
     private double a, b;
 
-    public EcuacionLineal(int a, int b) {
+    public EcuacionLineal(double a, double b) {
         this.a = a;
         this.b = b;
     }
