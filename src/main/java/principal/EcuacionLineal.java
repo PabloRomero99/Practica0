@@ -24,13 +24,11 @@ public class EcuacionLineal {
         this.b = b;
     }
 
-    public boolean haySolucion(int a, int b){
+    public boolean haySolucion(int a){
         if (a==0){
             return false;
         }
-        if(b*(-1)/a == 0)
-            return true;
-        return false;
+        return true;
     }
 
     public int solucion(int a, int b){
