@@ -26,12 +26,8 @@ public class EcuacionLineal {
 
     public boolean haySolucion(int a, int b){
         if (a==0){
-            if(b==0)
-                return true;
-            else
-                return false;
+            return false;
         }
-
         if(b*(-1)/a == 0)
             return true;
         return false;
