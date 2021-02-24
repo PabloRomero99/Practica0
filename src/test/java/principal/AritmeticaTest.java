@@ -1,26 +1,48 @@
 package principal;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AritmeticaTest {
+public class AritmeticaTest {
+    private static Aritmetica aritmetica;
 
-    @org.junit.jupiter.api.Test
-    void suma() {
+    @BeforeAll
+    public static void init() {
+        aritmetica = new Aritmetica();
     }
 
-    @org.junit.jupiter.api.Test
-    void resta() {
+    @AfterAll
+    public static void finish() {
+        aritmetica = null;
     }
 
     @Test
-    @DisplayName("La multiplitisaoh ")
-    void multiplicacion() {
+    public void testSuma() {
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(2, aritmetica.suma(1, 1));
+        //assertThat(aritmetica, notNullValue());
+        //assertThat(aritmetica.suma(2, 3), is(5.0f));
     }
 
-    @org.junit.jupiter.api.Test
-    void division() {
+    @Test
+    public void testResta() {
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(3, aritmetica.resta(4, 1));
+    }
+
+    @Test
+    public void testMultiplicacion() {
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(6, aritmetica.multiplicacion(2, 3));
+    }
+
+    @Test
+    public void testDivision() {
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(5, aritmetica.division(10, 2));
     }
 }

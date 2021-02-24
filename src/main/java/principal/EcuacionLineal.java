@@ -24,8 +24,10 @@ public class EcuacionLineal {
         this.b = b;
     }
 
-    public boolean haySolucion(int a, int b){
-        if (a==0){
+    public boolean haySolucion() throws ArithmeticException{
+        if (this.a==0){
+            if (this.b == 0)
+                throw new ArithmeticException("Tiene infinitas soluciones");
             return false;
         }
         return true;
