@@ -28,11 +28,12 @@ public class EcuacionLineal {
         if (a==0){
             return false;
         }
-
         return true;
     }
 
     public int solucion(int a, int b){
+        a = a*b;
+        //vamo vamo vamo
         return a;
     }
 }
