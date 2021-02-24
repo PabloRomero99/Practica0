@@ -1,28 +1,33 @@
 package principal;
 
-public class EcuacionCuadratica {
-    private int a, b;
 
-    public EcuacionCuadratica(int a, int b) {
+public class EcuacionCuadratica {
+    private double a, b,c;
+
+    public EcuacionCuadratica(double a, double b, double c) {
         this.a = a;
         this.b = b;
+        this.c = c;
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public void setA(int a) {
+    public double getC() { return c; }
+
+    public void setA(double a) {
         this.a = a;
     }
 
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
+    public void setC(double c) { this.c = c; }
 
     public boolean haySolucion(){
         if (this.a==0)

@@ -1,26 +1,26 @@
 package principal;
 
 public class EcuacionLineal {
-    private int a, b;
+    private double a, b;
 
     public EcuacionLineal(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
     }
 
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
 

@@ -15,11 +15,11 @@ class EcuacionLinealTest {
     void haySolucion() {
         ecuacionPrueba1 = new EcuacionLineal(0,1);
         ecuacionPrueba2 = new EcuacionLineal(10,5);
-        //ecuacionPrueba3 = new EcuacionLineal(0,0);
+        ecuacionPrueba3 = new EcuacionLineal(0,0);
 
         assertEquals(false, ecuacionPrueba1.haySolucion());
         assertEquals(true, ecuacionPrueba2.haySolucion());
-        //assertEquals(false, ecuacionPrueba3.haySolucion());     //Esta seria la de las soluciones infinitas
+        assertEquals(true, ecuacionPrueba3.haySolucion());     //Esta seria la de las soluciones infinitas
 
     }
 
